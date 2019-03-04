@@ -1,5 +1,5 @@
 import React from 'react';
-import { mainStyle } from './AppStyle';
+import { mainStyle } from './styles/AppStyle';
 import Filter from './Filter';
 
 

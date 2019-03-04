@@ -1,6 +1,6 @@
 import React from 'react';
+import { menuStyle , buttonStyle , gridStyle , gridScreenStyle, gridImgStyle, gridCaptionStyle } from './styles/FilterStyle';
 import  StackGrid, { transitions, easings }from "react-stack-grid";
-import { menuStyle , buttonStyle , gridStyle , gridScreenStyle, gridImgStyle, gridCaptionStyle } from './FilterStyle';
 import screens from './data.json';
 
 

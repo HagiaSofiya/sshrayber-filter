@@ -3,17 +3,18 @@ const menuStyle = {
     flexWrap: "wrap",
     justifyContent: "space-evenly",
     marginTop: "25px",
-    marginBottom: "25px"
+    marginBottom: "25px",
 }
 
 const buttonStyle = {
     backgroundColor: "transparent",
     border: "none",
+    borderBottom: "2px solid #4DD2C2",
     fontSize: "16px",
     fontWeight: "500",
     padding: "10px",
     textAlign: "left",
-    textAransform: "capitalize"
+    textTransform: "capitalize"
 }
 
 const gridStyle = {

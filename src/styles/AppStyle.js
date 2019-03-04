@@ -4,5 +4,4 @@ const mainStyle = {
     "width": "80vw"
 }
 
-
 export { mainStyle } 
