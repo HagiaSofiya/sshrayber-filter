@@ -31,23 +31,26 @@ class Filter extends React.Component {
         const categories = [...new Set(screens.map(screen => screen.name))]
         
         return (
-            <div>
-                {categories.map(category => {
-					return (
-                            <button 
-                                type="button" 
-                                onClick={() => this.compareBy(category)} key={category}>
-                                {category}
-                            </button>
-                        )
-				})}
-                <button 
-					type="button" 
-					onClick={() => this.reset()}>
-                    all
-                </button>
+            <div className='container'>
+                <div className='menu'>
+                    {categories.map(category => {
+                        return (
+                                <button
+                                    type="button"
+                                    onClick={() => this.compareBy(category)} key={category}>
+                                    {category}
+                                </button>
+                            )
+                    })}
+                    <button
+                        type="button"
+                        onClick={() => this.reset()}>
+                        all
+                    </button>
+                </div>
                 <StackGrid
                     columnWidth={150}
+                    className='grid'
                 >
                     {filteredScreens.map((screens) => {
                         return (
