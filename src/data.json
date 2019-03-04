@@ -511,7 +511,7 @@
 	},
 	{
 		"url": "http://invisionapp.com/subsystems/do_ui_kit/assets/img/screens/original-1x/screen-7-8-lists.jpg",
-		"name": "lists",
+		"name": "list",
 		"sort": 86,
 		"key": 86
 	},
@@ -745,7 +745,7 @@
 	},
 	{
 		"url": "http://invisionapp.com/subsystems/do_ui_kit/assets/img/screens/original-1x/screen-10-8-lists.jpg",
-		"name": "lists",
+		"name": "list",
 		"sort": 125,
 		"key": 125
 	},
