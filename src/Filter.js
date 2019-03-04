@@ -1,6 +1,6 @@
 import React from 'react';
 import  StackGrid, { transitions, easings }from "react-stack-grid";
-
+import { menuStyle , buttonStyle , gridStyle , gridScreenStyle, gridImgStyle, gridCaptionStyle } from './FilterStyle';
 import screens from './data.json';
 
 
@@ -35,11 +35,12 @@ class Filter extends React.Component {
         
         return (
             <div className='container'>
-                <div className='menu'>
+                <div style={menuStyle}>
                     <button
                         type="button"
                         onClick={() => this.reset()}
                         key="reset"
+                        style={buttonStyle}
                     >
                         all
                     </button>
@@ -47,15 +48,18 @@ class Filter extends React.Component {
                         return (
                                 <button
                                     type="button"
-                                    onClick={() => this.compareBy(category)} key={category}>
+                                    onClick={() => this.compareBy(category)} 
+                                    key={category}
+                                    style={buttonStyle}
+                                    >
                                     {category}
                                 </button>
                             )
                     })}
                 </div>
                 <StackGrid
+                    style={gridStyle}
                     columnWidth={200}
-                    className='grid'
                     gutterWidth={15}
                     gutterHeight={15}
                     duration={600}
@@ -69,9 +73,9 @@ class Filter extends React.Component {
                 >
                     {filteredScreens.map((screens) => {
                         return (
-                            <figure className="screen" key={screens.key}>
-                                <img src={screens.url} alt={screens.name}/>
-                                <figcaption className="screen-caption">{screens.name}</figcaption>
+                            <figure style={gridScreenStyle} key={screens.key}>
+                                <img style={gridImgStyle} src={screens.url} alt={screens.name}/>
+                                <figcaption style={gridCaptionStyle}>{screens.name}</figcaption>
                             </figure>
 
                         )

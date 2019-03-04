@@ -1,11 +1,12 @@
 import React from 'react';
+import { mainStyle } from './AppStyle';
 import Filter from './Filter';
 
 
 class App extends React.Component {
 	render() {
 		return (
-			<div className='main'>
+			<div style={mainStyle}>
 				<Filter/>
 			</div>
 		);

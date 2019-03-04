@@ -1,12 +1,3 @@
-//
-// BASE
-//
-
-:root {
-	font-size: 62.5%;
-}
-
-*, 
 *::after, 
 *::before { 
 	-webkit-box-sizing: border-box; 
@@ -21,13 +12,4 @@ body {
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-.main {
-	color: $black;
-}
-
-.container {
-	margin: 0 auto;
-	width: 80vw;
 }
