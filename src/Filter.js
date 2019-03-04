@@ -1,4 +1,5 @@
 import React from 'react';
+import StackGrid from "react-stack-grid";
 import screens from './data.json';
 
 
@@ -45,15 +46,19 @@ class Filter extends React.Component {
 					onClick={() => this.reset()}>
                     all
                 </button>
-                {filteredScreens.map((screens) => {
-                    return (
-                        <figure key={screens.key}>
-                            <img src={screens.url} alt={screens.name}/>
-                            <figcaption>{screens.name}</figcaption>
-                        </figure>
+                <StackGrid
+                    columnWidth={150}
+                >
+                    {filteredScreens.map((screens) => {
+                        return (
+                            <figure key={screens.key}>
+                                <img src={screens.url} alt={screens.name}/>
+                                <figcaption>{screens.name}</figcaption>
+                            </figure>
 
-                    )
-                })}                
+                        )
+                    })}
+                </StackGrid>
             </div>
         )
     }
