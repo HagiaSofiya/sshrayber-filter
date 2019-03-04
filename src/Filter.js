@@ -9,7 +9,7 @@ class Filter extends React.Component {
         super(props)
         this.state = {
             screens: screens,
-            filteredScreens: screens,
+            filteredScreens: screens
         }
     }
 
