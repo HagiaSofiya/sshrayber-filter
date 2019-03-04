@@ -32,7 +32,6 @@ class Filter extends React.Component {
         const categories = [...new Set(screens.map(screen => screen.name))]
 
         const transition = transitions.scaleDown;
-        
         return (
             <div className='container'>
                 <div style={menuStyle}>
