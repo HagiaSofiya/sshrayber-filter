@@ -1,5 +1,5 @@
 import React from 'react';
-import StackGrid from "react-stack-grid";
+import StackGrid from 'react-stack-grid';
 import screens from './data.json';
 
 
