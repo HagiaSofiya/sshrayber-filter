@@ -1,3 +1,15 @@
 //
 // GRID
 //
+
+.screen {
+
+    img {
+        width: 100%;
+    }
+
+    &-caption {
+        text-align: center;
+        text-transform: capitalize;
+    }
+}
