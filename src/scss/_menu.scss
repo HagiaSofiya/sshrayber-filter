@@ -5,13 +5,17 @@
 .menu {
     display: flex;
     flex-wrap: wrap;
-    z-index: 10000;
+    justify-content: space-evenly;
+    margin-top: 25px;
+    margin-bottom: 25px;
 
     button {
         background-color: transparent;
         border: none;
         font-size: 1.6rem;
-        font-weight: 300;
+        font-weight: 500;
+        padding: 10px;
+        text-align: left;
         text-transform: capitalize;
     }
 }

@@ -2,19 +2,22 @@
 // GRID
 //
 
-.screen {
+.grid {
+    margin-bottom: 50px;
+    .screen {
 
-    height: 380px;
-
-    img {
-        box-shadow: rgba(0, 0, 0, 0.08) 0px 0.7rem 2.5rem;
-        width: 100%;
-    }
-
-    &-caption {
-        font-size: 1.4rem;
-        margin-top: 0.4rem;
-        text-align: left;
-        text-transform: capitalize;
+        height: 380px;
+    
+        img {
+            box-shadow: rgba(0, 0, 0, 0.08) 0px 0.7rem 2.5rem;
+            width: 100%;
+        }
+    
+        &-caption {
+            font-size: 1.4rem;
+            margin-top: 0.4rem;
+            text-align: left;
+            text-transform: capitalize;
+        }
     }
 }

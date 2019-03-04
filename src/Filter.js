@@ -38,7 +38,9 @@ class Filter extends React.Component {
                 <div className='menu'>
                     <button
                         type="button"
-                        onClick={() => this.reset()}>
+                        onClick={() => this.reset()}
+                        key="reset"
+                    >
                         all
                     </button>
                     {categories.map(category => {
