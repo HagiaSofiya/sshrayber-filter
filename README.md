@@ -10,14 +10,14 @@
 ## File Structure
 
 * All JS related to this challenge are in the `src` folder.
-* All App Styling related to this challenge are in the `src\styling` folder.
+* All App Styling related to this challenge are in the `src\styles` folder.
 * Json data is hard coded in `data.json`
 
 ```
 src
 ├── App.js
 ├── App.test.scss
-├── data.js
+├── data.json
 ├── Filter.js
 ├── index.js
 ├── serviceWorker.js

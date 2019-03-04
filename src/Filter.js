@@ -1,6 +1,6 @@
 import React from 'react';
 import { menuStyle , buttonStyle , gridStyle , gridScreenStyle, gridImgStyle, gridCaptionStyle } from './styles/FilterStyle';
-import  StackGrid, { transitions, easings }from "react-stack-grid";
+import  StackGrid, { transitions, easings }from 'react-stack-grid';
 import screens from './data.json';
 
 
@@ -30,7 +30,6 @@ class Filter extends React.Component {
     render(){
         const { filteredScreens, screens } = this.state
         const categories = [...new Set(screens.map(screen => screen.name))]
-
         const transition = transitions.scaleDown;
         return (
             <div className='container'>
