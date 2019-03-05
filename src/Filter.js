@@ -1,16 +1,31 @@
 import React from 'react';
+import Loading from './Loading';
 import { menuStyle , buttonStyle , gridStyle , gridScreenStyle, gridImgStyle, gridCaptionStyle } from './styles/FilterStyle';
 import  StackGrid, { transitions, easings }from 'react-stack-grid';
-import screens from './data.json';
 
 
 class Filter extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            screens: screens,
-            filteredScreens: screens
+            loading: false,
+            screens: [],
+            filteredScreens: []
         }
+    }
+
+    componentDidMount(){
+        this.setState({loading: true})
+        fetch('https://api.jsonbin.io/b/5c7db3a72e4731596f15c20d')
+        .then(response => response.json())
+        .then(data => this.setState({ 
+            loading: false,
+            screens: data.images, 
+            filteredScreens: data.images
+        }))
+        .catch(err => {
+            console.log(err);
+        });
     }
 
     compareBy(key){
@@ -32,7 +47,8 @@ class Filter extends React.Component {
         const categories = [...new Set(screens.map(screen => screen.name))]
         const transition = transitions.scaleDown;
         return (
-            <div className='container'>
+            this.state.loading === false
+            ? <div className='container'>
                 <div style={menuStyle}>
                     <button
                         type="button"
@@ -69,7 +85,7 @@ class Filter extends React.Component {
                     entered={transition.entered}
                     leaved={transition.leaved}
                 >
-                    {filteredScreens.map((screens) => {
+                    {filteredScreens.map( screens => {
                         return (
                             <figure style={gridScreenStyle} key={screens.key}>
                                 <img style={gridImgStyle} src={screens.url} alt={screens.name}/>
@@ -80,6 +96,7 @@ class Filter extends React.Component {
                     })}
                 </StackGrid>
             </div>
+            : <Loading/>
         )
     }
 }
