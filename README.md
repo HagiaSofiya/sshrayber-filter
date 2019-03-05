@@ -11,20 +11,21 @@
 
 * All JS related to this challenge are in the `src` folder.
 * All App Styling related to this challenge are in the `src\styles` folder.
-* Json data is hard coded in `data.json`
+* API via [JSONbin](https://jsonbin.io/api-reference)
 
 ```
 src
 ├── App.js
 ├── App.test.scss
-├── data.json
 ├── Filter.js
 ├── index.js
+├── Loading.js
 ├── serviceWorker.js
 │
 └── styles
     ├──  AppStyle.js
     ├──  FilterStyle.js
+    ├──  LoadingStyle.js
     ├──  base.css
     └──  reset.css
 
